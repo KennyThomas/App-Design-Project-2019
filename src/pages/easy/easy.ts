@@ -217,13 +217,31 @@ this.score+=5;
 else
 {
   alert("answer wrong please try again");
-  this.buttonDisabled4 = false;
+  this.buttonDisabled5 = false;
 
 }
 
 
 
 }
+
+
+CheckScore(){
+
+  if(this.score == 25){
+  
+  alert("Congratulations you have won the easy round1");
+  
+  }
+  else{
+  
+  
+    alert("You have not reached a score of 25 yet, keep going!!");
+  }
+  
+  
+  }
+
 
 
 }
