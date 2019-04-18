@@ -1,14 +1,20 @@
-import { Component } from '@angular/core';
-import { Platform, Tabs } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { Platform, Tabs, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
 import { HomePage } from '../pages/home/home';
+import { EasyPage } from '../pages/easy/easy';
+import { GameMenuPage } from '../pages/game-menu/game-menu';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
+
+  @ViewChild(Nav) nav:Nav;
   rootPage:any = HomePage;
+ easy:any = EasyPage;
+ gameMenu :any = GameMenuPage;
+ 
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -18,5 +24,10 @@ export class MyApp {
       splashScreen.hide();
     });
   }
+
+  openPage(HomePage) {
+    this.nav.setRoot(HomePage);
+  }
+
 }
 

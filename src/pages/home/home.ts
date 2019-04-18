@@ -14,7 +14,7 @@ export class HomePage {
 Game(){
 
 
-this.navCtrl.push("GameMenuPage");
+this.navCtrl.push(GameMenuPage);
 
 
 }

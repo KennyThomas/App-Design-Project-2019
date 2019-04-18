@@ -5,9 +5,13 @@ import { GameMenuPage } from './game-menu';
 @NgModule({
   declarations: [
     GameMenuPage,
+ 
   ],
   imports: [
     IonicPageModule.forChild(GameMenuPage),
+    GameMenuPage,
+   
+
   ],
 })
 export class GameMenuPageModule {}
