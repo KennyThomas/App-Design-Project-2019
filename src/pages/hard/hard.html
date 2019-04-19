@@ -10,6 +10,152 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="Backgroundcolor">
+<ion-item class="Questions">
+  <h2>Question 1</h2>
+  <h3>Who is the artist?</h3>
+  <h4>Songs</h4>
+  <ion-item class="Songs">
+   <h2>Otherside</h2>
+   <h2>Cant Stop</h2>
+   <h2>Californication</h2>
+    </ion-item>
+
+<h3>Your Pick</h3>
+  <div *ngFor = "let song of songs">
+    <input class="List"
+    type="radio"
+    name="songs"
+    value = "{{song}}"
+    (change) = "radioChangeHandler($event)">
+    <i>{{song}}</i> 
+    </div>
+
+    <p><span>You Selected: </span> <b>{{selectedArtist}}</b></p>
+
+
+    <button  class="buttons" [disabled] = "buttonDisabled" ion-button (click)="CheckAnswer()">Save</button>
+    </ion-item>
+<br>
+<ion-item class="Questions">
+    <h2>Question 2 </h2>
+    <h3>Who is the artist?</h3>
+    <h4>Songs</h4>
+    <ion-item class="Songs">
+     <h2>Last Request</h2>
+     <h2>Iron Sky</h2>
+     <h2>Candy</h2>
+      </ion-item>
+  
+  <h3>Your Pick</h3>
+    <div *ngFor = "let song2 of songs2">
+      <input class="List"
+      type="radio"
+      name="songs2"
+      value = "{{song2}}"
+      (change) = "radioChangeHandler2($event)">
+      <i>{{song2}}</i> 
+      </div>
+  
+      <p><span>You Selected: </span> <b>{{selectedArtist2}}</b></p>
+  
+  
+      <button   class="buttons" [disabled] = "buttonDisabled2" ion-button (click)="CheckAnswer2()">Save</button>
+    </ion-item>
+    <br>
+<ion-item class="Questions">
+<h2>Question 3 </h2>
+<h3>Who is the artist?</h3>
+<h4>Songs</h4>
+<ion-item class="Songs">
+ <h2>I will Wait</h2>
+ <h2>The Cave</h2>
+ <h2>Guiding Light</h2>
+  </ion-item>
+
+<h3>Your Pick</h3>
+<div *ngFor = "let song3 of songs3">
+  <input class="List"
+  type="radio"
+  name="songs3"
+  value = "{{song3}}"
+  (change) = "radioChangeHandler3($event)">
+  <i>{{song3}}</i> 
+  </div>
+
+  <p><span>You Selected: </span> <b>{{selectedArtist3}}</b></p>
+
+
+  <button  class="buttons" [disabled] = "buttonDisabled3" ion-button (click)="CheckAnswer3()">Save</button>
+
+</ion-item>
+<br>
+
+<ion-item class="Questions">
+<h2>Question 4 </h2>
+<h3>Who is the artist?</h3>
+<h4>Songs</h4>
+<ion-item class="Songs">
+ <h2>Dancing in the Dark</h2>
+ <h2>Born to Run</h2>
+ <h2>Streets of Philadelphia</h2>
+  </ion-item>
+
+<h3>Your Pick</h3>
+<div *ngFor = "let song4 of songs4">
+  <input class="List"
+  type="radio"
+  name="songs4"
+  value = "{{song4}}"
+  (change) = "radioChangeHandler4($event)">
+  <i>{{song4}}</i> 
+  </div>
+
+  <p><span>You Selected: </span> <b>{{selectedArtist4}}</b></p>
+
+
+  <button  class="buttons" [disabled] = "buttonDisabled4" ion-button (click)="CheckAnswer4()">Save</button>
+</ion-item>
+<br>
+
+<ion-item class="Questions">
+<h2>Question 5 </h2>
+<h3>Who is the artist?</h3>
+<h4>Songs</h4>
+<ion-item class="Songs">
+ <h2>Everlong</h2>
+ <h2>Best of You</h2>
+ <h2>The Pretender</h2>
+  </ion-item>
+
+<h3>Your Pick</h3>
+<div *ngFor = "let song5 of songs5">
+  <input class="List"
+  type="radio"
+  name="songs5"
+  value = "{{song5}}"
+  (change) = "radioChangeHandler5($event)">
+  <i>{{song5}}</i> 
+  </div>
+
+  <p><span>You Selected: </span> <b>{{selectedArtist5}}</b></p>
+
+
+  <button  class="buttons" [disabled] = "buttonDisabled5" ion-button (click)="CheckAnswer5()">Save</button>
+</ion-item>
+
+
+
+
+
+    <H6>  Your score is : {{score}}  </H6>
+
+    <button  class="buttons"  ion-button (click)="CheckScore()">Submit Score</button>
+
+    <button  class="buttons" [disabled] = "buttonOf" ion-button (click)="Advance()">Advance</button>
+
+
+
+
 
 </ion-content>

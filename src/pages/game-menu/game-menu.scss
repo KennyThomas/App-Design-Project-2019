@@ -2,32 +2,15 @@ page-game-menu {
 
 }
 
-.backgroundcolor{
+
+.Message{
+
+    background-color: rgb(154, 208, 241);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 
 
-    background-color: rgba(149, 2, 2, 0.945);
- 
+text-align: center
     
-    }
-
-
-.Easy{
-    background-color: rgba(133, 2, 2, 0.753);
-    text-align: center;
-
 }
 
 
-.Medium{
-    background-color: rgba(0, 119, 167, 0.945);
-    text-align: center;
-
-}
-
-
-
-.Hard{
-    background-color: rgba(16, 139, 36, 0.945);
-    text-align: center;
-
-}

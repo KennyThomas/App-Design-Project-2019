@@ -11,7 +11,7 @@
 </ion-header>
 
 <ion-content padding class="Background">
-
+  <ion-item class="Questions">
   <h2>Question 1</h2>
   <h3>Who is the artist?</h3>
   <h4>Songs</h4>
@@ -34,9 +34,10 @@
     <p><span>You Selected: </span> <b>{{selectedArtist}}</b></p>
 
 
-    <button [disabled] = "buttonDisabled" ion-button (click)="CheckAnswer()">Save</button>
-
-///////////////////////////////////////////////////////////////////////////////////////////////
+    <button class="buttons" [disabled] = "buttonDisabled" ion-button (click)="CheckAnswer()">Save</button>
+  </ion-item>
+<br>
+<ion-item class="Questions">
     <h2>Question 2 </h2>
     <h3>Who is the artist?</h3>
     <h4>Songs</h4>
@@ -59,10 +60,10 @@
       <p><span>You Selected: </span> <b>{{selectedArtist2}}</b></p>
   
   
-      <button [disabled] = "buttonDisabled2" ion-button (click)="CheckAnswer2()">Save</button>
-
-/////////////////////////////////////////////////////////////////////////////////////////////////
-
+      <button class="buttons" [disabled] = "buttonDisabled2" ion-button (click)="CheckAnswer2()">Save</button>
+    </ion-item>
+    <br>
+<ion-item class="Questions">
 <h2>Question 3 </h2>
 <h3>Who is the artist?</h3>
 <h4>Songs</h4>
@@ -85,12 +86,11 @@
   <p><span>You Selected: </span> <b>{{selectedArtist3}}</b></p>
 
 
-  <button [disabled] = "buttonDisabled3" ion-button (click)="CheckAnswer3()">Save</button>
+  <button class="buttons" [disabled] = "buttonDisabled3" ion-button (click)="CheckAnswer3()">Save</button>
+</ion-item>
+<br>
 
-
-////////////////////////////////////////////////////////////////////////////////
-
-
+<ion-item class="Questions">
 <h2>Question 4 </h2>
 <h3>Who is the artist?</h3>
 <h4>Songs</h4>
@@ -113,11 +113,11 @@
   <p><span>You Selected: </span> <b>{{selectedArtist4}}</b></p>
 
 
-  <button [disabled] = "buttonDisabled4" ion-button (click)="CheckAnswer4()">Save</button>
+  <button class="buttons" [disabled] = "buttonDisabled4" ion-button (click)="CheckAnswer4()">Save</button>
+</ion-item>
+<br>
 
-///////////////////////////////////////////////////////////
-
-
+<ion-item class="Questions">
 <h2>Question 5 </h2>
 <h3>Who is the artist?</h3>
 <h4>Songs</h4>
@@ -140,8 +140,8 @@
   <p><span>You Selected: </span> <b>{{selectedArtist5}}</b></p>
 
 
-  <button [disabled] = "buttonDisabled5" ion-button (click)="CheckAnswer5()">Save</button>
-
+  <button class="buttons" [disabled] = "buttonDisabled5" ion-button (click)="CheckAnswer5()">Save</button>
+</ion-item>
 
 
 
@@ -149,9 +149,9 @@
 
     <H6>  Your score is : {{score}}  </H6>
 
-    <button  ion-button (click)="CheckScore()">Submit Score</button>
+    <button  [color] = "buttons" class="buttons" ion-button (click)="CheckScore()">Submit Score</button>
 
-    <button  [disabled] = "buttonOf" ion-button (click)="Advance()">Advance</button>
+    <button class="buttons" [disabled] = "buttonOf" ion-button (click)="Advance()">Advance</button>
 
 
 
