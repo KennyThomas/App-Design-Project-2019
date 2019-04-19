@@ -21,8 +21,9 @@ export class EasyPage {
   buttonDisabled3: boolean;
   buttonDisabled4: boolean;
   buttonDisabled5: boolean;
+  buttonOf:boolean = false;
  
-  selectedArtist: String = " ";
+   selectedArtist: String = " ";
   selectedArtist2: String = " ";
   selectedArtist3: String = " ";
   selectedArtist4: String = " ";
@@ -159,6 +160,8 @@ if(this.selectedArtist3== this.songs3[1]){
 this.buttonDisabled3 = true;
 alert("correct");
 this.score+=5;
+
+
 }
 else
 {
@@ -231,7 +234,7 @@ CheckScore(){
   if(this.score == 25){
   
   alert("Congratulations you have won the easy round1");
-  
+  this.buttonOf =false;
   }
   else{
   
@@ -241,6 +244,18 @@ CheckScore(){
   
   
   }
+
+
+
+  Advance(){
+
+
+this.navCtrl.push("MediumPage")
+
+
+  }
+
+
 
 
 
