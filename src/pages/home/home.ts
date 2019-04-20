@@ -20,7 +20,13 @@ this.navCtrl.push(GameMenuPage);
 }
 
 
+Charts(){
 
+
+
+
+  this.navCtrl.push("ChartsPage")
+}
 
 
 }

@@ -6,6 +6,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { GameMenuPage } from '../pages/game-menu/game-menu';
+import { HttpModule } from '@angular/http';
+import { ChartInfoProvider } from '../providers/chart-info/chart-info';
 
 
 
@@ -19,7 +21,9 @@ import { GameMenuPage } from '../pages/game-menu/game-menu';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    HttpModule,
+    IonicModule.forRoot(MyApp)
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -30,7 +34,9 @@ import { GameMenuPage } from '../pages/game-menu/game-menu';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    ChartInfoProvider,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ChartInfoProvider
   ]
 })
 export class AppModule {}

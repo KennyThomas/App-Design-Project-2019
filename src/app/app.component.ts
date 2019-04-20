@@ -7,6 +7,7 @@ import { EasyPage } from '../pages/easy/easy';
 import { GameMenuPage } from '../pages/game-menu/game-menu';
 @Component({
   templateUrl: 'app.html'
+  
 })
 export class MyApp {
 

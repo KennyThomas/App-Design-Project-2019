@@ -28,7 +28,7 @@ export class GameMenuPage {
   Easy(){
 
 
-    this.navCtrl.push(EasyPage);
+    this.navCtrl.push("EasyPage");
     
     
     }
