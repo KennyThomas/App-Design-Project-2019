@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Nav } from 'ionic-angular';
+import { IonicPage, NavController, NavParams} from 'ionic-angular';
 import {Storage} from '@ionic/storage';
 import{GameMenuPage} from '../game-menu/game-menu';
 

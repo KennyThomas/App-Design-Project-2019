@@ -1,15 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams} from 'ionic-angular';
 import {Storage} from '@ionic/storage';
+import{Vibration} from '@ionic-native/vibration/ngx';
 
 
-
-/**
- * Generated class for the EasyPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -83,7 +77,14 @@ export class EasyPage {
 
 
  
-  constructor(public navCtrl: NavController, public navParams: NavParams,private storage:Storage) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private storage:Storage , private vibration:Vibration) {
+
+
+    document.addEventListener("deviceready", onDeviceReady, false);
+    function onDeviceReady() {
+        console.log(vibration.vibrate);
+    }
+
   
   }
 
@@ -107,13 +108,16 @@ radioChangeHandler(event:any){
 CheckAnswer(){
 if(this.selectedArtist == this.songs[0]){
 this.buttonDisabled = true;
-alert("correct");
+
 this.score+=5;
+
 }
 else
 {
-  alert("answer wrong please try again");
+ 
   this.buttonDisabled = false;
+  navigator.vibrate(2000);
+
 
 }
 
@@ -131,13 +135,14 @@ radioChangeHandler2(event:any){
 CheckAnswer2(){
 if(this.selectedArtist2 == this.songs2[2]){
 this.buttonDisabled2 = true;
-alert("correct");
+
 this.score+=5;
 }
 else
 {
-  alert("answer wrong please try again");
+
   this.buttonDisabled2 = false;
+  navigator.vibrate(2000);
 
 }
 
@@ -159,15 +164,16 @@ radioChangeHandler3(event:any){
 CheckAnswer3(){
 if(this.selectedArtist3== this.songs3[1]){
 this.buttonDisabled3 = true;
-alert("correct");
+
 this.score+=5;
 
 
 }
 else
 {
-  alert("answer wrong please try again");
+  
   this.buttonDisabled3 = false;
+  navigator.vibrate(2000);
 
 }
 
@@ -189,13 +195,14 @@ radioChangeHandler4(event:any){
 CheckAnswer4(){
 if(this.selectedArtist4== this.songs4[0]){
 this.buttonDisabled4 = true;
-alert("correct");
+
 this.score+=5;
 }
 else
 {
-  alert("answer wrong please try again");
+ 
   this.buttonDisabled4 = false;
+  navigator.vibrate(2000);
 
 }
 
@@ -215,13 +222,14 @@ radioChangeHandler5(event:any){
 CheckAnswer5(){
 if(this.selectedArtist5== this.songs5[3]){
 this.buttonDisabled5 = true;
-alert("correct");
+
 this.score+=5;
 }
 else
 {
-  alert("answer wrong please try again");
+  
   this.buttonDisabled5 = false;
+  navigator.vibrate(2000);
 
 }
 
@@ -233,14 +241,12 @@ else
 CheckScore(){
 
   if(this.score == 25){
-  
-  alert("Congratulations you have won the easy round1");
+  ;
   this.buttonOf =false;
   }
   else{
   
   
-    alert("You have not reached a score of 25 yet, keep going!!");
   }
   
   

@@ -9,6 +9,8 @@ import { GameMenuPage } from '../pages/game-menu/game-menu';
 import { ChartInfoProvider } from '../providers/chart-info/chart-info';
 import { HttpModule } from '@angular/http';
 import {IonicStorageModule} from '@ionic/storage';
+import { Vibration } from '@ionic-native/vibration/ngx';
+
 
 
 
@@ -34,8 +36,9 @@ import {IonicStorageModule} from '@ionic/storage';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ChartInfoProvider
+   {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ChartInfoProvider,
+    Vibration
   ]
 })
 export class AppModule {}

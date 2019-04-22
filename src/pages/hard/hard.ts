@@ -2,12 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import{GameMenuPage} from '../game-menu/game-menu';
 import {Storage} from '@ionic/storage';
-/**
- * Generated class for the HardPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import{Vibration} from '@ionic-native/vibration/ngx';
 
 @IonicPage()
 @Component({
@@ -79,7 +74,12 @@ export class HardPage {
                             ];
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,private storage:Storage) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private storage:Storage, private vibration:Vibration) {
+    document.addEventListener("deviceready", onDeviceReady, false);
+    function onDeviceReady() {
+        console.log(vibration.vibrate);
+    }
+
   }
 
   ionViewDidLoad() {
@@ -98,13 +98,14 @@ export class HardPage {
   CheckAnswer(){
   if(this.selectedArtist == this.songs[2]){
   this.buttonDisabled = true;
-  alert("correct");
+ 
   this.score+=5;
   }
   else
   {
-    alert("answer wrong please try again");
+    
     this.buttonDisabled = false;
+    navigator.vibrate(2000);
   
   }
   
@@ -122,14 +123,14 @@ export class HardPage {
   CheckAnswer2(){
   if(this.selectedArtist2 == this.songs2[3]){
   this.buttonDisabled2 = true;
-  alert("correct");
+
   this.score+=5;
   }
   else
   {
-    alert("answer wrong please try again");
+    
     this.buttonDisabled2 = false;
-  
+    navigator.vibrate(2000);
   }
   
   
@@ -150,16 +151,16 @@ export class HardPage {
   CheckAnswer3(){
   if(this.selectedArtist3== this.songs3[1]){
   this.buttonDisabled3 = true;
-  alert("correct");
+  
   this.score+=5;
   
   
   }
   else
   {
-    alert("answer wrong please try again");
+
     this.buttonDisabled3 = false;
-  
+    navigator.vibrate(2000);
   }
   
   
@@ -180,14 +181,13 @@ export class HardPage {
   CheckAnswer4(){
   if(this.selectedArtist4== this.songs4[2]){
   this.buttonDisabled4 = true;
-  alert("correct");
+
   this.score+=5;
   }
   else
   {
-    alert("answer wrong please try again");
     this.buttonDisabled4 = false;
-  
+    navigator.vibrate(2000);
   }
   
   
@@ -206,14 +206,13 @@ export class HardPage {
   CheckAnswer5(){
   if(this.selectedArtist5== this.songs5[0]){
   this.buttonDisabled5 = true;
-  alert("correct");
+ 
   this.score+=5;
   }
   else
   {
-    alert("answer wrong please try again");
     this.buttonDisabled5 = false;
-  
+    navigator.vibrate(2000);
   }
   
   
@@ -225,18 +224,11 @@ export class HardPage {
   
     if(this.score == 25){
     
-    alert("Congratulations you have won the easy round1");
+
     this.buttonOf =false;
     }
-    else{
     
-    
-      alert("You have not reached a score of 25 yet, keep going!!");
-    }
-    
-    
-    }
-  
+  }
   
   
     Advance(){
