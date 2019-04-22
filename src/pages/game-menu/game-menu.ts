@@ -52,6 +52,17 @@ export class GameMenuPage {
         }
 
 
+
+        Score(){
+
+
+          this.navCtrl.push("ScoresPage");
+          
+          
+          }
+
+
+
         BackHome(){
 
 

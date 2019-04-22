@@ -16,35 +16,18 @@ import { ChartInfoProvider } from '../../providers/chart-info/chart-info';
   templateUrl: 'charts.html',
 })
 export class ChartsPage {
-tracks:String;
+  charts : any = [];
 
-
-  constructor(public navCtrl: NavController, public navParams: NavParams, private CI:ChartInfoProvider) {
+  constructor(public navCtrl: NavController,private movieProvider:ChartInfoProvider){
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ChartsPage');
-
-
-    this.CI.getMusic().subscribe(data =>
-      {
-        console.log(data);
-        
-      this.tracks = data.tracks;
-      console.log(data.tracks);
-    
-      
-    
-      });
-      }
-
-
-
-
+  ionViewDidLoad(){
+    this.movieProvider.getChartInfo().subscribe((data)=>{
+        this.charts=data.Search;
+    });
   }
 
-
-
+}
 
 
 

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import {Storage} from '@ionic/storage';
 /**
  * Generated class for the MediumPage page.
  *
@@ -30,7 +30,7 @@ export class MediumPage {
 
   score:any = 0;
 
-
+EasyScore:any;
 
 
   songs:any = [    //Lewis Capaldi[3]
@@ -81,7 +81,7 @@ export class MediumPage {
 
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private storage:Storage) {
   }
 
   ionViewDidLoad() {
@@ -231,10 +231,12 @@ export class MediumPage {
     
     alert("Congratulations you have won the easy round1");
     this.buttonOf =false;
+
+   
     }
     else{
     
-    
+  
       alert("You have not reached a score of 25 yet, keep going!!");
     }
     
@@ -244,9 +246,16 @@ export class MediumPage {
   
   
     Advance(){
+      this.storage.set('ScoreMedium', this.score);
+      this.navCtrl.pop();
   
   
   this.navCtrl.push("HardPage")
+
+
+
+
+
   
   
     }
@@ -255,6 +264,7 @@ export class MediumPage {
   
 
 
+    
 
 
 

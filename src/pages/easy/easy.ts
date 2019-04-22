@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Button } from 'ionic-angular';
+import { IonicPage, NavController, NavParams} from 'ionic-angular';
+import {Storage} from '@ionic/storage';
 
 
 
@@ -82,7 +83,7 @@ export class EasyPage {
 
 
  
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private storage:Storage) {
   
   }
 
@@ -248,12 +249,26 @@ CheckScore(){
 
 
   Advance(){
-
+    this.storage.set('ScoreEasy', this.score);
+    this.navCtrl.pop();
 
 this.navCtrl.push("MediumPage")
 
 
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

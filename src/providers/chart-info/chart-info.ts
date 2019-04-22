@@ -13,16 +13,15 @@ import { Observable } from 'rxjs/Observable';
 export class ChartInfoProvider {
 
   constructor(public http: Http) {
-    console.log('Hello ChartInfoProvider Provider');
-  }
+    console.log('Hello ChartInfo Provider');
+    }
+    getChartInfo():Observable<any>{
+      return this.http.get('http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=0d1afd69d8af4e8f7271690adf77b635&format=json');
+    }
+  
 
 
-  getMusic(): Observable<any>{
-    return this.http.get("http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=0d1afd69d8af4e8f7271690adf77b635&format=json");
 
 
-
-
-  }
 
 }

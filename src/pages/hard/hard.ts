@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import{GameMenuPage} from '../game-menu/game-menu';
+import {Storage} from '@ionic/storage';
 /**
  * Generated class for the HardPage page.
  *
@@ -78,7 +79,7 @@ export class HardPage {
                             ];
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private storage:Storage) {
   }
 
   ionViewDidLoad() {
@@ -239,7 +240,8 @@ export class HardPage {
   
   
     Advance(){
-  
+      this.storage.set('ScoreHard', this.score);
+      this.navCtrl.pop();
   
   this.navCtrl.push(GameMenuPage)
   
