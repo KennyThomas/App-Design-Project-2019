@@ -5,14 +5,17 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="backgroundColor">
 
-
+  <h2>Music Charts</h2>
+  <h4>In order</h4>
     <ion-list>
-        <ion-item *ngFor="let M of charts"> 
-          <h1>{{m.track}}</h1> 
-          <p>{{m.Year}}</p>
-          
-        </ion-item>
-      </ion-list>
-        </ion-content>
+      <ion-item *ngFor="let track of tracks" class="charts"> 
+
+        <h1> Song Title :<br> {{track.name}}</h1> 
+        <p> Artist name : {{track.artist.name}}</p>
+        <p> Times Played: {{track.playcount}}</p>
+   
+      </ion-item>
+    </ion-list>
+    </ion-content>

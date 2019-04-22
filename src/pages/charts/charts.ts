@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController,IonicPage} from 'ionic-angular';
 import { ChartInfoProvider } from '../../providers/chart-info/chart-info';
 
 
@@ -10,25 +10,26 @@ import { ChartInfoProvider } from '../../providers/chart-info/chart-info';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+@IonicPage() 
 @Component({
   selector: 'page-charts',
   templateUrl: 'charts.html',
 })
 export class ChartsPage {
-  charts : any = [];
+ 
+  tracks : any = [];
 
-  constructor(public navCtrl: NavController,private movieProvider:ChartInfoProvider){
+  constructor(public navCtrl: NavController, 
+    private CI:ChartInfoProvider){
   }
 
   ionViewDidLoad(){
-    this.movieProvider.getChartInfo().subscribe((data)=>{
-        this.charts=data.Search;
+    this.CI.getChartInfo().subscribe((data)=>{
+        this.tracks=data.tracks.track;
     });
   }
 
 }
-
 
 
 

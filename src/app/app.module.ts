@@ -7,10 +7,9 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { GameMenuPage } from '../pages/game-menu/game-menu';
 import { ChartInfoProvider } from '../providers/chart-info/chart-info';
-import { HttpModule } from '@angular/http';
 import {IonicStorageModule} from '@ionic/storage';
 import { Vibration } from '@ionic-native/vibration/ngx';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -23,7 +22,7 @@ import { Vibration } from '@ionic-native/vibration/ngx';
   ],
   imports: [
     BrowserModule,
-    HttpModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot()
   ],
