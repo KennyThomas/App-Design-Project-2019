@@ -14,6 +14,12 @@ export class ScoresPage {
   MediumScore:any = 0;
   HardScore:any = 0;
 
+ incorrectEasyScore:any =0;
+ incorrectMediumScore:any = 0;
+ incorrectHardScore:any = 0;
+
+
+
   constructor(public navCtrl: NavController, public navParams: NavParams,private storage:Storage) {
   }
 
@@ -30,9 +36,11 @@ ViewScoreEasy(){
 
   this.storage.get('ScoreEasy').then((val1) => {
     this.EasyScore = val1;
-    console.log('Your score is ', val1);
   });
 
+  this.storage.get('incorrectScoreEasy').then((val4) => {
+    this.incorrectEasyScore = val4;
+  });
 
 }
 
@@ -42,7 +50,10 @@ ViewScoreEasy(){
 
     this.storage.get('ScoreMedium').then((val2) => {
       this.MediumScore = val2;
-      console.log('Your score is ', val2);
+      
+    });
+    this.storage.get('incorrectScoreMedium').then((val5) => {
+      this.incorrectMediumScore = val5;
     });
 
 
@@ -54,9 +65,11 @@ ViewScoreEasy(){
 
       this.storage.get('ScoreHard').then((val3) => {
         this.HardScore = val3;
-        console.log('Your score is ', val3);
+       
       });
-
+      this.storage.get('incorrectScoreHard').then((val6) => {
+        this.incorrectHardScore = val6;
+      });
   
     }
 

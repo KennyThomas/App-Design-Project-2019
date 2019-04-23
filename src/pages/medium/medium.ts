@@ -25,8 +25,7 @@ export class MediumPage {
   selectedArtist5: String = " ";
 
   score:any = 0;
-
-EasyScore:any;
+incorrectScore:any = 0;
 
 
   songs:any = [    //Lewis Capaldi[3]
@@ -81,7 +80,7 @@ EasyScore:any;
 
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
-        console.log(vibration.vibrate);
+    
     }
 
   }
@@ -112,6 +111,7 @@ EasyScore:any;
     
     this.buttonDisabled = false;
     navigator.vibrate(2000);
+    ++this.incorrectScore;
   }
   
   ///////////////////////////////////////////////////////////////////////////////////////////  QUESTION 2
@@ -136,6 +136,7 @@ EasyScore:any;
    
     this.buttonDisabled2 = false;
     navigator.vibrate(2000);
+    ++this.incorrectScore;
   }
   
   
@@ -166,6 +167,7 @@ EasyScore:any;
   
     this.buttonDisabled3 = false;
     navigator.vibrate(2000);
+    ++this.incorrectScore;
   }
   
   
@@ -193,6 +195,7 @@ EasyScore:any;
   {
     this.buttonDisabled4 = false;
     navigator.vibrate(2000);
+    ++this.incorrectScore;
   }
   
   
@@ -219,6 +222,7 @@ EasyScore:any;
     
     this.buttonDisabled5 = false;
     navigator.vibrate(2000);
+    ++this.incorrectScore;
   }
   
   
@@ -248,6 +252,7 @@ EasyScore:any;
   
     Advance(){
       this.storage.set('ScoreMedium', this.score);
+      this.storage.set('incorrectScoreMedium', this.incorrectScore);
       this.navCtrl.pop();
   
   

@@ -24,7 +24,7 @@ export class HardPage {
   selectedArtist5: String = " ";
 
   score:any = 0;
-
+incorrectScore:any = 0;
 
 
 
@@ -106,7 +106,7 @@ export class HardPage {
     
     this.buttonDisabled = false;
     navigator.vibrate(2000);
-  
+    ++this.incorrectScore;
   }
   
   ///////////////////////////////////////////////////////////////////////////////////////////  QUESTION 2
@@ -131,6 +131,7 @@ export class HardPage {
     
     this.buttonDisabled2 = false;
     navigator.vibrate(2000);
+    ++this.incorrectScore;
   }
   
   
@@ -161,6 +162,7 @@ export class HardPage {
 
     this.buttonDisabled3 = false;
     navigator.vibrate(2000);
+    ++this.incorrectScore;
   }
   
   
@@ -188,6 +190,7 @@ export class HardPage {
   {
     this.buttonDisabled4 = false;
     navigator.vibrate(2000);
+    ++this.incorrectScore;
   }
   
   
@@ -213,6 +216,7 @@ export class HardPage {
   {
     this.buttonDisabled5 = false;
     navigator.vibrate(2000);
+    ++this.incorrectScore;
   }
   
   
@@ -233,6 +237,7 @@ export class HardPage {
   
     Advance(){
       this.storage.set('ScoreHard', this.score);
+      this.storage.set('incorrectScoreHard', this.incorrectScore);
       this.navCtrl.pop();
   
   this.navCtrl.push(GameMenuPage)

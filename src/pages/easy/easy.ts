@@ -25,7 +25,7 @@ export class EasyPage {
   selectedArtist5: String = " ";
 
   score:any = 0;
-
+incorrectScore:any = 0;
 
 
 
@@ -117,6 +117,7 @@ else
  
   this.buttonDisabled = false;
   navigator.vibrate(2000);
+  ++this.incorrectScore;
 
 
 }
@@ -143,7 +144,7 @@ else
 
   this.buttonDisabled2 = false;
   navigator.vibrate(2000);
-
+  ++this.incorrectScore;
 }
 
 
@@ -174,7 +175,7 @@ else
   
   this.buttonDisabled3 = false;
   navigator.vibrate(2000);
-
+  ++this.incorrectScore;
 }
 
 
@@ -203,7 +204,7 @@ else
  
   this.buttonDisabled4 = false;
   navigator.vibrate(2000);
-
+  ++this.incorrectScore;
 }
 
 
@@ -230,7 +231,7 @@ else
   
   this.buttonDisabled5 = false;
   navigator.vibrate(2000);
-
+  ++this.incorrectScore;
 }
 
 
@@ -244,18 +245,12 @@ CheckScore(){
   ;
   this.buttonOf =false;
   }
-  else{
-  
-  
-  }
-  
-  
-  }
-
+}
 
 
   Advance(){
     this.storage.set('ScoreEasy', this.score);
+    this.storage.set('incorrectScoreEasy', this.incorrectScore);
     this.navCtrl.pop();
 
 this.navCtrl.push("MediumPage")

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController,IonicPage} from 'ionic-angular';
 import { ChartInfoProvider } from '../../providers/chart-info/chart-info';
-
+import{HomePage} from '../home/home';
 
 /**
  * Generated class for the ChartsPage page.
@@ -28,6 +28,16 @@ export class ChartsPage {
         this.tracks=data.tracks.track;
     });
   }
+
+
+BackHome(){
+
+
+this.navCtrl.push(HomePage);
+
+
+}
+
 
 }
 

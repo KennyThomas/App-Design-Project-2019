@@ -12,12 +12,13 @@
 
 <ion-content padding class="backgroundColor">
 
-
+<h1>Your Score</h1>
 
 
 
 
 <h2>Your score on the easy page was: {{EasyScore}} </h2>
+<h2>Your number of incorrect guesses on the easy page was: {{incorrectEasyScore}} </h2>
 
   <button class="buttons"  ion-button (click)="ViewScoreEasy()">View your Easy page Score </button>
 
@@ -26,7 +27,7 @@
 
 
   <h2>Your score on the Medium page was: {{MediumScore}} </h2>
-
+  <h2>Your number of incorrect guesses on the Medium page was: {{incorrectMediumScore}} </h2>
   <button class="buttons"  ion-button (click)="ViewScoreMedium()">View your Medium page Score </button>
 
 
@@ -34,7 +35,7 @@
 
   
 <h2>Your score on the Hard page was: {{HardScore}} </h2>
-
+<h2>Your number of incorrect guesses on the Hard page was: {{incorrectHardScore}} </h2>
 <button class="buttons"  ion-button (click)="ViewScoreHard()">View your Hard page Score </button>
 
 
