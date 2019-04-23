@@ -20,4 +20,11 @@ export class ChartInfoProvider {
     return this.http.get('http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=0d1afd69d8af4e8f7271690adf77b635&format=json');
   }
 
+
+
+  getArtistInfo():Observable<any>{
+    return this.http.get('http://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key=0d1afd69d8af4e8f7271690adf77b635&format=json');
+  }
+
+
 }

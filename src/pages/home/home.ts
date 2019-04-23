@@ -29,4 +29,16 @@ Charts(){
 }
 
 
+
+Artist(){
+
+
+
+
+  this.navCtrl.push("ArtistsPage")
+}
+
+
+
+
 }

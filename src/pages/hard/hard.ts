@@ -15,7 +15,7 @@ export class HardPage {
   buttonDisabled3: boolean;
   buttonDisabled4: boolean;
   buttonDisabled5: boolean;
-  buttonOf:boolean = false;
+  buttonOf:boolean = true;
  
    selectedArtist: String = " ";
   selectedArtist2: String = " ";

@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Charts</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="backgroundColor">
+
+  <h2>Most listened to artists</h2>
+  
+
+    <ion-list>
+      <ion-item *ngFor="let artist of artists" class="charts"> 
+
+        <h1> Artist name :<br> {{artist.name}}</h1> 
+        <p> Playcount : {{artist.playcount}}</p>
+      
+   
+      </ion-item>
+    </ion-list>
+    <button class ="buttons" ion-button block round  (click)="BackHome()">Back to Home</button>
+    </ion-content>
