@@ -3,12 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { ChartInfoProvider } from '../../providers/chart-info/chart-info';
 
-/**
- * Generated class for the ArtistsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({
@@ -25,7 +20,7 @@ export class ArtistsPage {
  
   ionViewDidLoad(){
     this.CI.getArtistInfo().subscribe((data)=>{
-        this.artists=data.artists.artist;
+        this.artists=data.artists.artist;             //gets the JSON data
 
     });
     

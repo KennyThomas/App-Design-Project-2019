@@ -4,12 +4,7 @@ import{HomePage} from '../home/home';
 import{EasyPage} from '../easy/easy';
 
 
-/**
- * Generated class for the GameMenuPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({

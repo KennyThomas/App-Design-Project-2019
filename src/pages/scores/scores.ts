@@ -35,7 +35,7 @@ ViewScoreEasy(){
 
 
   this.storage.get('ScoreEasy').then((val1) => {
-    this.EasyScore = val1;
+    this.EasyScore = val1;                                 //gets the local storage values
   });
 
   this.storage.get('incorrectScoreEasy').then((val4) => {
@@ -50,7 +50,7 @@ ViewScoreEasy(){
 
     this.storage.get('ScoreMedium').then((val2) => {
       this.MediumScore = val2;
-      
+                                                                       //gets the local storage values
     });
     this.storage.get('incorrectScoreMedium').then((val5) => {
       this.incorrectMediumScore = val5;
@@ -64,7 +64,7 @@ ViewScoreEasy(){
 
 
       this.storage.get('ScoreHard').then((val3) => {
-        this.HardScore = val3;
+        this.HardScore = val3;                                                           //gets the local storage values
        
       });
       this.storage.get('incorrectScoreHard').then((val6) => {

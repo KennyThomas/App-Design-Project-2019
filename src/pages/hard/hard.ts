@@ -75,10 +75,7 @@ incorrectScore:any = 0;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams,private storage:Storage, private vibration:Vibration) {
-    document.addEventListener("deviceready", onDeviceReady, false);
-    function onDeviceReady() {
-        console.log(vibration.vibrate);
-    }
+  
 
   }
 

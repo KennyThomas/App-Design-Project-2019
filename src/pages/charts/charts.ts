@@ -25,7 +25,7 @@ export class ChartsPage {
 
   ionViewDidLoad(){
     this.CI.getChartInfo().subscribe((data)=>{
-        this.tracks=data.tracks.track;
+        this.tracks=data.tracks.track;             //get the JSON data
     });
   }
 

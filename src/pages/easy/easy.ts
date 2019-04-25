@@ -13,7 +13,7 @@ import{Vibration} from '@ionic-native/vibration/ngx';
 export class EasyPage {
   buttonDisabled: boolean;
   buttonDisabled2: boolean;
-  buttonDisabled3: boolean;
+  buttonDisabled3: boolean;               //disbaled buttons when user gets correct answer
   buttonDisabled4: boolean;
   buttonDisabled5: boolean;
   buttonOf:boolean = true;
@@ -41,7 +41,7 @@ incorrectScore:any = 0;
   'Juice WRLD',
   'Khalid',
   'Post Malone',
-  'Logic'
+  'Logic'                                                   //song arrays to show user
     
       ];
 
@@ -80,10 +80,7 @@ incorrectScore:any = 0;
   constructor(public navCtrl: NavController, public navParams: NavParams,private storage:Storage , private vibration:Vibration) {
 
 
-    document.addEventListener("deviceready", onDeviceReady, false);
-    function onDeviceReady() {
-        console.log(vibration.vibrate);
-    }
+  
 
   
   }
@@ -106,7 +103,7 @@ radioChangeHandler(event:any){
 
 
 CheckAnswer(){
-if(this.selectedArtist == this.songs[0]){
+if(this.selectedArtist == this.songs[0]){      //if the song matches the correct answer which is first in the array
 this.buttonDisabled = true;
 
 this.score+=5;
@@ -116,7 +113,7 @@ else
 {
  
   this.buttonDisabled = false;
-  navigator.vibrate(2000);
+  navigator.vibrate(2000);                //f user gets question wrong the phone will vibrate
   ++this.incorrectScore;
 
 
@@ -189,7 +186,7 @@ else
 radioChangeHandler4(event:any){
 
 
-  this.selectedArtist4 = event.target.value;
+  this.selectedArtist4 = event.target.value; //used to change the selected artist
 }
 
 
@@ -249,8 +246,8 @@ CheckScore(){
 
 
   Advance(){
-    this.storage.set('ScoreEasy', this.score);
-    this.storage.set('incorrectScoreEasy', this.incorrectScore);
+    this.storage.set('ScoreEasy', this.score);                     //sets score on local storage
+    this.storage.set('incorrectScoreEasy', this.incorrectScore);          //sets the inccorect score on local storage
     this.navCtrl.pop();
 
 this.navCtrl.push("MediumPage")
