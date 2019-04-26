@@ -14,8 +14,8 @@ ionic serve -l
 
 
 ### Installing
-npm install -g cordova ionic@3.20.0
-ionic start myApp blank
+* npm install -g cordova ionic@3.20.0
+* ionic start myApp blank
 
 ## Deployment
 
