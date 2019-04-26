@@ -8,6 +8,20 @@ A music app consisting of a guess the artist game and pages to view top single c
 * Ionic 3.2    https://ionicframework.com/
 
 
+## Getting Started
+ionic serve -l
+
+
+
+### Installing
+npm install -g cordova ionic@3.20.0
+ionic start myApp blank
+
+## Deployment
+
+ionic serve -l
+Using ionic DevApp use ionic serve -c
+
 
 ## Authors
 
@@ -21,6 +35,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 * https://ionicframework.com/docs/v1/
+*https://www.last.fm/home
 
 
 
