@@ -19,8 +19,8 @@ ionic start myApp blank
 
 ## Deployment
 
-ionic serve -l
-Using ionic DevApp use ionic serve -c
+* ionic serve -l
+* Using ionic DevApp use ionic serve -c
 
 
 ## Authors
@@ -35,7 +35,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 * https://ionicframework.com/docs/v1/
-*https://www.last.fm/home
+* https://www.last.fm/home
 
 
 
